@@ -41,3 +41,9 @@ group :development, :test do
   gem 'spring'
 end
 
+gem 'carrierwave'
+gem 'fog'
+gem 'dotenv-rails'
+gem 'mini_magick'
+gem 'rails_12factor'
+gem 'active_model_serializers'
