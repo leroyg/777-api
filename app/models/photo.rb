@@ -8,9 +8,8 @@ class Photo < ActiveRecord::Base
   end
 
   after_create do
-    Rails.logger.error "Let's push to pusher!"
     Pusher['seven-live'].trigger('photoCreated', {
-      model: PhotoSerializer.new(self).to_json
+      id: token
     })
   end
 end
