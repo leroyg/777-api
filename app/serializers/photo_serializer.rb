@@ -8,4 +8,8 @@ class PhotoSerializer < ActiveModel::Serializer
   def thumb_photo_url
     object.photo.url(:thumb)
   end
+
+  def id
+    object.token
+  end
 end
